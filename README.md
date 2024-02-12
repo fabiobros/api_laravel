@@ -41,3 +41,13 @@ php artisan migrate
 
 Acesse o projeto
 [http://localhost:8000](http://localhost:8000)
+
+Caso apareça a pagina padrão do laravel, o projeto estara funcional.
+
+Todas as rotas e documentação estão dentro do arquivo
+
+API_LARAVEL_CRUD.postman_collection
+
+Basta importar a collection para o postman e utilizar as rotas POST,GET,PUT e DELETE.
+
+
