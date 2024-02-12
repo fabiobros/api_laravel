@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "1171e8bf-f718-4aa2-a6e0-2aae8cd8a865",
+		"name": "API_LARAVEL_CRUD",
+		"description": "StartFragment\n\nPara criar uma documentação para o Postman, você pode usar o formato JSON que o Postman aceita. Abaixo está um exemplo básico de uma coleção Postman que inclui as quatro operações (POST, GET, PUT, DELETE) para a sua API de lugares.\n\n1. **Criar um Novo Lugar (POST):**\n    - httpPOST /api/places\n    - json { \"name\": \"Nome do Lugar\", \"slug\": \"slug-do-lugar\", \"city\": \"Nome da Cidade\", \"state\": \"UF\"}\n    - '[http://localhost:8000/api/places'](http://localhost:8000/api/places'), CURLOPT_RETURNTRANSFER => true, CURLOPT_CUSTOMREQUEST => 'POST', CURLOPT_POSTFIELDS => '{ \"name\": \"Nome do Lugar\", \"slug\": \"slug-do-lugar\", \"city\": \"Nome da Cidade\", \"state\": \"UF\" }', CURLOPT_HTTPHEADER => array( 'Content-Type: application/json' ),));$response = curl_exec($curl);curl_close($curl);echo $response;\n2. **Obter Todos os Lugares (GET):**\n    - codeGET /api/places\n    - code '[http://localhost:8000/api/places'](http://localhost:8000/api/places'), CURLOPT_RETURNTRANSFER => true, CURLOPT_CUSTOMREQUEST => 'GET',));$response = curl_exec($curl);curl_close($curl);echo $response;\n3. **Obter Detalhes de um Lugar (GET):**\n    - codeGET /api/places/{id}\n    - **Parâmetros de URL:**\n        - `{id}`: Identificador único do lugar\n    - code '[http://localhost:8000/api/places/1'](http://localhost:8000/api/places/1'), CURLOPT_RETURNTRANSFER => true, CURLOPT_CUSTOMREQUEST => 'GET',));$response = curl_exec($curl);curl_close($curl);echo $response;\n4. **Atualizar um Lugar (PUT):**\n    - codePUT /api/places/{id}\n    - **Parâmetros de URL:**\n        - `{id}`: Identificador único do lugar\n    - { \"city\": \"Nova Cidade\", \"state\": \"Nova UF\"}\n    - '[http://localhost:8000/api/places/1'](http://localhost:8000/api/places/1'), CURLOPT_RETURNTRANSFER => true, CURLOPT_CUSTOMREQUEST => 'PUT', CURLOPT_POSTFIELDS => '{ \"city\": \"Nova Cidade\", \"state\": \"Nova UF\" }', CURLOPT_HTTPHEADER => array( 'Content-Type: application/json' ),));$response = curl_exec($curl);curl_close($curl);echo $response;\n5. **Excluir um Lugar (DELETE):**\n    - DELETE /api/places/{id}\n    - **Parâmetros de URL:**\n        - `{id}`: Identificador único do lugar\n    - '[http://localhost:8000/api/places/1'](http://localhost:8000/api/places/1'), CURLOPT_RETURNTRANSFER => true, CURLOPT_CUSTOMREQUEST => 'DELETE',));$response = curl_exec($curl);curl_close($curl);echo $response;\n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "8367961"
+	},
+	"item": [
+		{
+			"name": "Create Place",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Barigui1232\",\r\n    \"slug\": \"Parque Barigui!!!@30\",\r\n    \"city\": \"Curitiba1199\",\r\n    \"state\": \"PR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/places"
+			},
+			"response": []
+		},
+		{
+			"name": "Find Places",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/places"
+			},
+			"response": []
+		},
+		{
+			"name": "Find Places by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/places/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Place by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Barigui1232\",\r\n    \"slug\": \"Parque Barigui!!!@10\",\r\n    \"city\": \"Curitiba1199\",\r\n    \"state\": \"PR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/places/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Places by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/places/52"
+			},
+			"response": []
+		}
+	]
+}
